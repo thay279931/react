@@ -1,4 +1,11 @@
+import Counter from './ex-1025-2/Counter'
+
 function App() {
-  return<><h1>123</h1></>
+  return (
+    <>
+      <Counter />
+    </>
+  )
 }
+
 export default App
