@@ -29,6 +29,7 @@ function App() {
   return (
     <>
       {selection}
+      <p>元件檔案路徑: {examples[displayIndex].path}</p>
       <hr />
       <MyComponent />
     </>
