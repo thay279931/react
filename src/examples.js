@@ -9,8 +9,20 @@ import ParentPropTypes from './ex-1027-2/Parent'
 import ParentDataFlow from './ex-1027-3/Parent'
 import InputDemo from './ex-1028-1/InputDemo'
 import HTML5Form from './ex-1028-2/HTML5Form'
+import Birth from './ex-1029-1/Birth'
+import Bmi from './ex-1029-2/Bmi'
 
 export const examples = [
+  {
+    name: '1029-2 Bmi',
+    path: '/ex-1029-1/Bmi.js',
+    component: Bmi,
+  },
+  {
+    name: '1029-1 BirthCheck',
+    path: '/ex-1029-1/Birth.js',
+    component: Birth,
+  },
   {
     name: '1028-2 各種可控表單元件',
     path: '/ex-1028-2/HTML5Form.js',
