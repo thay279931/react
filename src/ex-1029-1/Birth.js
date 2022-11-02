@@ -56,7 +56,7 @@ function Birth() {
   return (
     <>
       {/* 年份 */}
-      
+
       <select
         value={year}
         onChange={(e) => {
@@ -67,16 +67,14 @@ function Birth() {
           setDays(newDays) //設定二月天數
         }}
       >
-       
         <option value="">請選擇年份</option>
         {yearsList.map((v, i) => {
           return <option key={i}>{v}</option>
         })}
-        
       </select>
       <label>年</label>
       {/* 月份 */}
-  
+
       <select
         value={month}
         onChange={(e) => {
@@ -84,7 +82,6 @@ function Birth() {
           setMonth(newMonth) //設定月份狀態
         }}
       >
-        
         <option value="">請選擇月份</option>
         {monthsList.map((v, i) => {
           return (

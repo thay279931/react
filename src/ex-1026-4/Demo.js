@@ -29,7 +29,7 @@ function Demo() {
       <table border="1">
         {data.map((v, i) => {
           return (
-            <tr key={i}>
+            <tr key={v.id}>
               <td>{v.id}</td>
               <td>{v.text}</td>
             </tr>
@@ -118,6 +118,7 @@ function Demo() {
           const index = data.findIndex((v, i) => {
             return v.id === 2
           })
+
           // 如果有找到
           if (index !== -1) {
             // 在索引位置處，分割兩個子陣列
@@ -149,7 +150,7 @@ function Demo() {
             const newData = data.map((v, i) => {
               return { ...v }
             })
-            console.log(newData)
+
             // 常見最簡單的深拷貝語法
             //const newData3 = JSON.parse(JSON.stringify(data))
 

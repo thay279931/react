@@ -92,7 +92,6 @@ function HTML5Form() {
                 if (likeList.includes(value)) {
                   // 如果此項目值在state陣列中 -> 移出state陣列
                   const newLikeList = likeList.filter((v2, i2) => v2 !== value)
-                  console.log(newLikeList)
                   setLikeList(newLikeList)
                 } else {
                   // 如果不在此state陣列中 -> 加到state陣列中

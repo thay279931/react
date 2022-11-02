@@ -4,6 +4,7 @@ function Bmi() {
   const [height, setHeight] = useState('')
   const [weight, setWeight] = useState('')
   const [divinner, setDivinner] = useState('')
+  const [divinner2, setDivinner2] = useState('')
 
   function bmi(weight, height) {
     const w = parseInt(weight)
@@ -13,10 +14,12 @@ function Bmi() {
   }
 
   function calculateBMI() {
-    if (weight !== '' && height !== '') {
+    if (weight <= 10 || height <= 100) {
+      alert('體重身高錯誤請重新填寫！')
+      return
+    } else if (weight !== '' || height !== '') {
       setDivinner(checkBMI(bmi(weight, height)))
-    } else {
-      setDivinner('請輸入身高體重！')
+      setDivinner2(bmi(weight, height).toFixed(1))
     }
   }
 
@@ -39,25 +42,30 @@ function Bmi() {
     <>
       <label>身高</label>
       <input
-        type="text"
-        value={height}
+        type="number"
+        value={height === 0 ? '' : height}
+        placeholder="請輸入身高"
         onChange={(e) => {
-          setHeight(e.target.value)
+          setHeight(Number(e.target.value))
         }}
       />
       <label>公分</label>
       <br />
       <label>體重</label>
       <input
-        type="text"
-        value={weight}
+        type="number"
+        value={weight === 0 ? '' : weight}
+        placeholder="請輸入體重"
         onChange={(e) => {
-          setWeight(e.target.value)
+          setWeight(Number(e.target.value))
         }}
       />
       <label>公斤</label>
+      <br />
       <button onClick={calculateBMI}>計算</button>
-      <div>{divinner}</div>
+      <div>
+        BMI值:{divinner2},{divinner}
+      </div>
     </>
   )
 }
