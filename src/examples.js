@@ -20,7 +20,13 @@ import User from './ex-1102-3/User'
 import FileUploadSample from './ex-1102-4/FileUploadSample'
 import ImageDemo from './ex-1103-1/ImageDemo'
 import UserDemo from './ex-1103-2/UserDemo'
+import UserPage from './ex-1104-1/UserPage'
 export const examples = [
+  {
+    name: '1104-1 UserPage',
+    path: '/ex-1104-1/UserPage.js',
+    component: UserPage,
+  },
   {
     name: '1103-2 UserDemo',
     path: '/ex-1103-1/UserDemo.js',
